@@ -1,0 +1,174 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --backgroud: #232C33;
+    --secondaryBackground: #87b2c7;
+    --text: #DADFF7;
+    --purple: #5A7D7C;
+    --teal: #a3a1af;
+}
+
+body
+{
+    background-color: var(--backgroud);
+    color: var(--text);
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    max-width: 500px;
+    margin: 120px auto 0 auto;
+
+}
+.stats-container
+{
+    padding: 40px;
+    border-radius: 20px;
+    border:2px solid var(--purple);
+    display:flex;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    
+}
+.details
+{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+#progessBar
+{
+    width: 100%;
+    height:10px;
+    background-color: var(--secondaryBackground);
+    border-radius: 5px;
+    margin-top: 20px;
+
+}
+#progress
+{
+    width: 0%;
+    height: 10px;
+    background-color: var(--teal);
+    border-radius: 10px;
+    transition: all 0.3 ease;
+    transition: width 0.5s ease; 
+}
+#numbers
+{
+    width: 60px;
+    height: 60px;
+    background-color: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: blod;
+
+}
+form
+{
+    margin-top: 30px;
+    width:100%;
+    display: flex;
+    gap:10px;
+}
+input
+{
+    
+    flex:1;
+    padding: 16px;
+    background-color: var(--secondaryBackground);
+    border: 1px solid var(--purple);
+    border-radius: 10px;
+    outline: none;
+    color: var(--text);
+}
+button
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--purple);
+    color: var(--text);
+    font-size: 30px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+#task-list
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    width:100%;
+    list-style-type: none;
+}
+.taskItem
+{
+    width:100%;
+    display: flex;
+    background-color: var(--secondaryBackground);
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-right: 60px;
+}
+.task
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.task input
+{
+    width: 20px;
+    height: 20px;
+}
+.taskItem img
+{
+    width: 24px;
+    height: 24px;
+    margin:0 10px;
+    cursor: pointer;
+}
+.Xiao-image 
+{
+    width: 300px; 
+    height: auto; 
+    margin-bottom: 20px;
+    display: block; 
+    align-items: center;
+}
+.completed p
+{
+    text-decoration: line-through;
+    color: var(--purple);
+    
+}
+.details p
+{
+    margin-bottom: 20px
+}
+

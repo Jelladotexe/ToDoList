@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class = "container">
+        <div class="stats-container">
+            <div class="details">
+                <img src="Xiao.png" alt="XiaoImg" class="Xiao-image" />
+                <h1>To do list</h1>
+                <p>You can do all of it!</p>
+                <div id="progressBar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div class="stats-number">
+                <p id="numbers">
+                    0 / 0
+                </p>
+            </div>
+        </div>
+
+        <form>
+            <input type="text" id="taskInput" placeholder = "Write your task">
+            <button id="newTask" type="submit">+</button>
+        </form> 
+
+        <ul id="task-list"></ul>
+
+    </div>
+    <script src = "app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+</body>
+</html>
