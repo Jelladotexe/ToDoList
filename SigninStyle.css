@@ -1,0 +1,230 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif
+}
+:root
+{
+    --backgroud: #232C33;
+    --secondaryBackground: #87b2c7;
+    --text: #DADFF7;
+    --purple: #5A7D7C;
+    --teal: #a3a1af;
+}
+.parallax img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+/*Flower*/
+@keyframes moveFlower {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
+#flower {
+    align-items: end;
+    animation: moveFlower 10s ease-in-out infinite; 
+}
+/*Cloud1*/
+@keyframes moveCloud1 {
+    0% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(20px); 
+    }
+    65% {
+        transform: translateX(-20px); 
+    }
+    90% {
+        transform: translateX(0); 
+    }
+}
+#cloud1 {
+    animation: moveCloud1 20s ease-in-out infinite; 
+}
+/*Cloud2*/
+@keyframes moveCloud2 {
+    0% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(20px); 
+    }
+    65% {
+        transform: translateX(-20px); 
+    }
+    90% {
+        transform: translateX(0); 
+    }
+}
+#cloud2 {
+    animation: moveCloud2 20s ease-in-out infinite; 
+}
+
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #49502E;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+header
+{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: var(--backgroud);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo
+{
+    font-size: 40px;
+    color: var(--text);
+    user-select: none;
+}
+.navigation a
+{
+    position: relative;
+    font-size: 17px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navigation a::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 1.5px;
+    background: var(--text);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition:transform .5s; 
+
+}
+.navigation a:hover::after
+{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.navigation .btnLogin-popup
+{
+    width: 130px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--text);
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    color: var(--text);
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+.navigation .btnLogin-popup:hover
+{
+    background: var(--text);
+    color: var(--purple);
+
+}
+.wrapper
+{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius:20px ;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper .form-box
+{
+    width: 100%;
+    padding: 40px;
+}
+.form-box h2
+{
+    font-size: 20px;
+    color: var(--backgroud);
+    text-align: center;
+}
+.input-box
+{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--backgroud);
+    margin: 30px 0;
+}
+.input-box label
+{
+    position: absolute;
+    top: 50%;
+    left:5px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: var(--backgroud);
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:not(:placeholder-shown)~label { 
+    top:-5px;
+}
+
+.input-box input
+{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.input-box .icon
+{
+    position: absolute;
+    right: 8px;
+    font-size: 15px;
+    color: var(--backgroud);
+    line-height: 45px;
+}
+
